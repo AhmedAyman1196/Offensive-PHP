@@ -14,6 +14,9 @@
 		<input type = "text"  name = "key"> 
         	 <input type="submit" value = "Search">
       </form>
+	<form action="cv.php" method="post">
+         <input type="submit" value = "Upload CV">
+      </form>
 	</br></br></br>
 
 	<h1>
