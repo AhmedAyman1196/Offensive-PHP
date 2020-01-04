@@ -1,15 +1,16 @@
- <?php
-$servername = "localhost";
-$username = "user";
-$password = "password";
-$dbname = "site";
+
+<?php
+    $servername = "localhost";
+    $username = "user";
+    $password = "password";
+    $dbname = "site";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+      if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+      }
 // ---------------------------------------------------------
 
 // insert query
@@ -40,5 +41,4 @@ if (mysqli_num_rows($result) > 0) {
 mysqli_close($conn);
 
 $conn->close();
-?> 
-
+?>

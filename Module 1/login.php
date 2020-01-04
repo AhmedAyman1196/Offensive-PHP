@@ -10,9 +10,9 @@
 	if( isset($_GET['email']) )
 	{
 		$filename = "./Users/".md5($_GET['email']) ;
-		// check if user exists (file exists)
-		if(file_exists($filename)){ 
-			
+		// check if user exists then (file exists)
+		if(file_exists($filename)){
+
 			$file = fopen($filename, "r") or die("Unable to open file!");
 			$data = fgets($file) or die("Cannot read file");
 			// echo $data ;
@@ -24,15 +24,14 @@
 				setcookie("token", md5($_GET['email'])) ;
 				header("Location: profile.php");
 			}
-			/*foreach ($arr as $i){ 
+			/*foreach ($arr as $i){
   				echo $i . "  " ;
-			} 
+			}
 			*/
 			fclose($file);
 		}else { echo " </br> </br> <h1> Wrong username :( </h1> " ;}
-		
-	}	
+
+	}
 	?>
       </body>
 </html>
-
